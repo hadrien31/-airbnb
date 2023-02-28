@@ -5,12 +5,22 @@
 <div class="container">
   <div class="cards">
 
-  <div class="card">
+
 
   <% @adventures.each do |adventure| %>
-     <div class="card"><%= adventure.title %></div>
+     <div class="card">
+      <%= adventure.title %>
+      <%
+       if adventure.photos%>
+      <%= cl_image_tag(adventure.photos.first.key,
+      width: 400, height: 300, crop: :fill) %>
+      <% end %>
+
+
+
+ </div>
   <% end %>
 
 
-  </div>
+
 </div>
