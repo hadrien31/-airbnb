@@ -1,4 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<h2>page d'acceuil</h2>
+<h1 class="kl">KOH-LANTA ADVENTURE</h1>
 
+<p class= "descr">Rent a incredible adventure from all over the world... and beyond</p>
+
+<div class="container">
+  <div class="cards">
+
+  <div class="card">
+
+  <% @adventures.each do |adventure| %>
+     <div class="card"><%= adventure.title %></div>
+  <% end %>
+
+
+  </div>
+</div>

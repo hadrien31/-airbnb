@@ -1,2 +1,3 @@
 class AdventuresController < ApplicationController
+  
 end
