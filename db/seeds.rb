@@ -43,3 +43,4 @@ file_mountain3 = URI.open("https://res.cloudinary.com/dtlwkdqpv/image/upload/v16
 mountain = Adventure.create(user: user1, title: 'Mountain Exploration', location: 'Tyrol', decription: 'Se la jouer Mike Horn en stage de survie ', price: 34000)
 mountain.photos.attach({io: file_mountain1, filename: "mountain1_up22cy.jpg", content_type: "image/jpg"},{  io: file_mountain2, filename: "mountain2_vl9gky.jpg", content_type: "image/jpg"},{  io: file_mountain3, filename: "mountain3_qcebw5.jpg", content_type: "image/jpg"})
 mountain.save!
+
