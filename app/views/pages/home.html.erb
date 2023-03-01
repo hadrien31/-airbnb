@@ -17,7 +17,6 @@
        if adventure.photos%>
           <%= cl_image_tag(adventure.photos.first.key, :transformation=>[
   {:height=>300, :width=>250, :crop=>"scale"},
-  {:radius=>"16"}
   ]) %>
       <% end %>
       <li class="ms-2"> <%= adventure.title %></li>
