@@ -1,4 +1,7 @@
-
+.show{
+  display: flex;
+  justify-content: center;
+}
 
 .title{
   text-align: center;
@@ -8,4 +11,17 @@
 .price{
   font-weight: bolder;
   text-align:justify;
+}
+.contenu{
+
+  background-color: white;
+}
+h2{
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+.rent{
+
+  background-color: white;
 }
