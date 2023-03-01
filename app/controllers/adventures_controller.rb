@@ -1,5 +1,6 @@
 class AdventuresController < ApplicationController
   before_action :set_adventure, only: [:show, :destroy]
+ 
 
   def new
     @adventure = Adventure.new
