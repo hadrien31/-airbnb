@@ -12,6 +12,7 @@
 
   <div class="card">
     <%= link_to adventure_path(adventure), :action => 'go' do %>
+    
       <%if adventure.photos%>
         <%= cl_image_tag(adventure.photos.first.key, :transformation=>[
         {:height=>300, :width=>250, :crop=>"scale"},
