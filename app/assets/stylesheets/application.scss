@@ -12,6 +12,7 @@
 @import "components/index";
 @import "pages/index";
 
+
 .cards{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -52,20 +53,14 @@ body a {
   border: none;
   display: flex;
 }
-.card .hoover{
-  animation: ;
-}
 
 body{
 
   background: url(banner3.jpg);
 }
 
-
-
 .navbar{
   position: sticky;
-
   top: 0;
 }
 

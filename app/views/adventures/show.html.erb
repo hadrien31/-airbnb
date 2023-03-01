@@ -1,6 +1,13 @@
-<div class="container">
+<div class="card" style="width: 18rem;">
+  <%= cl_image_tag(@adventure.photos.first.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
+  <div class="card-body">
   <h2><%= @adventure.title %></h2>
-  <p><%= @adventure.decription %></p>
-  <p><%= @adventure.location %></p>
-  <p><%= @adventure.price %></p>
-</div>
+  </div>
+ <div class = "description">
+ <p><%= @adventure.decription %></p>
+
+ </div>
+ <div class = "location">  <p><%= @adventure.location %></p> </div>
+ <div class = "price"> <p><%= @adventure.price %></p> </div>
