@@ -26,10 +26,10 @@ class AdventuresController < ApplicationController
   private
 
   def adventure_params
-    params.require(:adventure).permit(:title, :price, :location, :description)
+    params.require(:adventure).permit(:title, :price, :location, :decription)
   end
 
   def set_adventure
-    @adventure = List.find(params[:id])
+    @adventure = Adventure.find(params[:id])
   end
 end
