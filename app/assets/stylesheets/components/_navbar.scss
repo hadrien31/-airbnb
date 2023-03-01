@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,18 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  color: white;
+  font-family: 'Staatliches';
+  font-size: 20px;
+}
+
+.title_navbar {
+  color: white;
+  font-family: 'Staatliches';
+  font-size: 40px;
+  margin: 0px;
 }

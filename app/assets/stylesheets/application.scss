@@ -12,6 +12,7 @@
 @import "components/index";
 @import "pages/index";
 
+
 .cards{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -51,6 +52,7 @@ body a {
   border-radius: 16px;
   border: none;
   display: flex;
+  transition: all .2s ease-in-out;
 }
 
 
@@ -59,11 +61,8 @@ body{
   background: url(banner3.jpg);
 }
 
-
-
 .navbar{
   position: sticky;
-
   top: 0;
 }
 
