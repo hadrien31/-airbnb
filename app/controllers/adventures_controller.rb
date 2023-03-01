@@ -1,13 +1,12 @@
 class AdventuresController < ApplicationController
   before_action :set_adventure, only: [:show, :destroy]
- 
+
 
   def new
     @adventure = Adventure.new
   end
 
   def show
-    @adventure = Adventure.new
   end
 
   def create
