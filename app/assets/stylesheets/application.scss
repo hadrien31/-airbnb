@@ -13,12 +13,20 @@
 @import "pages/index";
 
 .cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  list-style-type : none;
+}
 
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-gap: 16px;
-list-style-type : none;
+body a {
+  text-decoration: none;
+  color: black;
+}
 
+.cards img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .descr{
