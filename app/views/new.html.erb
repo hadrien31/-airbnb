@@ -1,0 +1,18 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create a new adventure</h3>
+        <%= simple_form_for @list do |f| %>
+          <%= f.input :title, placeholder: 'title' %>
+          <%= f.input :price, placeholder: 'price' %>
+          <%= f.input :location, placeholder: 'location' %>
+          <%= f.input :description, placeholder: 'description' %>
+
+
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

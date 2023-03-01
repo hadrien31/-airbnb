@@ -2,25 +2,37 @@
 
 <p class= "descr">Rent a incredible adventure from all over the world... and beyond</p>
 
+<%# <%= link_to "Create a new adventure", new_adventure_path, class: "btn btn-flat" %>
+
+
 <div class="container">
+
   <div class="cards">
 
 
-
   <% @adventures.each do |adventure| %>
-     <div class="card">
-      <%= adventure.title %>
+
+  <div class="card">
+
+
+
       <%
        if adventure.photos%>
-      <%= cl_image_tag(adventure.photos.first.key,
-      width: 400, height: 300, crop: :fill) %>
+          <%= cl_image_tag(adventure.photos.first.key) %>
       <% end %>
+      <li class="ms-2"> <%= adventure.title %></li>
+      <li class="ms-2"> Price: <%= adventure.price %> $</li>
+      <li class="ms-2"> <%= adventure.location %></li>
 
 
 
- </div>
+</div>
   <% end %>
 
 
+</div>
+<p class= "mt-3">
+<%= link_to "Create a new adventure", new_adventure_path, class: "btn btn-primary" %>
+</p>
 
 </div>
