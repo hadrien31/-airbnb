@@ -11,7 +11,8 @@ class AdventuresController < ApplicationController
 
   def create
     @adventure = Adventure.new(adventure_params)
-    if @adventure.save
+    @adventure.user = current_user
+    if @adventure.save!
       redirect_to adventure_path(@adventure)
     else
       render :new, status: :unprocessable_entity
@@ -26,7 +27,7 @@ class AdventuresController < ApplicationController
   private
 
   def adventure_params
-    params.require(:adventure).permit(:title, :price, :location, :decription)
+    params.require(:adventure).permit(:title, :price, :location, :decription, :photos)
   end
 
   def set_adventure
