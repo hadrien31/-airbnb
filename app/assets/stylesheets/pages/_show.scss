@@ -1,6 +1,8 @@
-
+.row-col-8{
+  justify-content: space-evenly;
+}
 .container_imgs {
-  display: flex;
+  display:flex;
   padding-left: 10px;
   border: 20px solid;
   border-image-width: 12px;
@@ -37,4 +39,5 @@
 }
 .card_description{
   font-size: 18px;
+ 
 }
