@@ -1,48 +1,39 @@
-.card{
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-// .title{
-//   text-align: center;
-
-// }
-
-// .price{
-//   font-weight: bolder;
-//   text-align:justify;
-// }
-// .contenu{
-
-//   background-color: white;
-// }
-// h2{
-//   font-weight: bolder;
-//   display: flex;
-//   justify-content: center;
-// }
-// .rent{
-
-//   background-color: white;
-// }
 .container_imgs {
   display: flex;
-  align-items: center;
- padding-left: 10px;
+  padding-left: 10px;
+  border: 20px solid;
+  border-image-width: 12px;
+  border-color:white;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  max-height: 340px;
 }
-.image{
-  img {
-    object-fit: contain;
-  }
+.image_left{
+
+  width: 50%;
+  float: left;
+  height: 100vh;
 }
-.card-body{
+.image_right{
+  width: 50%;
+  float: right;
+  height: 100vh;
+}
+
+
+.title-body{
   font-size: 24px;
   font-kerning: auto;
   font-weight: bolder;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  color: white;
+
 }
 .card_description{
   font-size: 18px;
