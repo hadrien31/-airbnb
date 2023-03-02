@@ -7,6 +7,9 @@ class AdventuresController < ApplicationController
   end
 
   def show
+    @adventure = Adventure.find(params[:id])
+    @booking = Booking.new
+    
   end
 
   def create
