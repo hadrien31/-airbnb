@@ -23,4 +23,7 @@
         <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
         <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
       </ul>
+<div>
+      <%= link_to "Book this adventure", new_adventure_booking_path(@adventure), class: "btn btn-primary" %>
+</div>
   </div>
