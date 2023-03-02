@@ -38,6 +38,7 @@ body a {
   color: white;
   -webkit-animation: fadein 15s;
 }
+
 .kl{
   font-family: 'Staatliches';
   display: flex;
@@ -58,20 +59,14 @@ body a {
   transform: scale(1.1);
   }
 
-
 body{
-
   background: url(banner3.jpg);
 }
 
-
-
 .navbar{
   position: sticky;
-
   top: 0;
 }
-
 
 @-webkit-keyframes fadein { /* sur Safari et Chrome */
   from {
@@ -80,4 +75,13 @@ body{
   to {
       opacity:1;
   }
+}
+
+.btn-log-sign {
+  color: white;
+  border-color: white;
+}
+
+.btn-log-sign2 {
+  color: white;
 }

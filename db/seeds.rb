@@ -16,7 +16,7 @@ file_jungle1 = URI.open("https://res.cloudinary.com/dtlwkdqpv/image/upload/v1677
 file_jungle2 = URI.open("https://res.cloudinary.com/dtlwkdqpv/image/upload/v1677593890/Koh-Lanta/Jungle/jungle2_kt1vj2.jpg")
 file_jungle3 = URI.open("https://res.cloudinary.com/dtlwkdqpv/image/upload/v1677593886/Koh-Lanta/Jungle/jungle3_pnfewl.jpg")
 
-jungle = Adventure.create(user: user1, title: 'Jungle Book', location: 'Pandora', decription: 'Dans le monde extraterrestre luxuriant de Pandora vivez comme  les Navi, des êtres qui semblent primitifs, mais qui sont très évolués', price: 34000 )
+jungle = Adventure.create(user: user1, title: 'Jungle Book', location: 'Pandora', decription: 'Dans le monde extraterrestre luxuriant de Pandora vivez comme  les Navi, des êtres qui semblent primitifs, mais qui sont très évolués..', price: 34000 )
 jungle.photos.attach({io: file_jungle1, filename: "jungle1_uoggke.jpg", content_type: "image/jpg"},{ io: file_jungle2, filename: "jungle2_kt1vj2.jpg", content_type: "image/jpg"},{  io: file_jungle3, filename: "jungle3_pnfewl.jpg", content_type: "image/jpg"})
 jungle.save
 

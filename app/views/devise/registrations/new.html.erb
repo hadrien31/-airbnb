@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="bg-white rounded p-3 shadow">
+  <div class="bg-black rounded p-3 shadow text-white">
   <h2>Sign up</h2>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class:"btn-log-sign" %>
     </div>
   <% end %>
 
