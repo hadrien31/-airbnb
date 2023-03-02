@@ -1,9 +1,11 @@
 <div class="show">
 
 <div class="cardshow" style="width: 16rem;">
+<%if @adventure.photos.attached?%>
   <%= cl_image_tag(@adventure.photos.first.key, :transformation=>[
         {:height=>300, :width=>250, :crop=>"scale"},
         ]) %>
+  <% end %>
         <div class="contenu">
   <div class="card-body">
   <h2><%= @adventure.title %></h2>
