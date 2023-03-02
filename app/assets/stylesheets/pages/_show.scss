@@ -1,27 +1,49 @@
-.show{
+.card{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// .title{
+//   text-align: center;
+
+// }
+
+// .price{
+//   font-weight: bolder;
+//   text-align:justify;
+// }
+// .contenu{
+
+//   background-color: white;
+// }
+// h2{
+//   font-weight: bolder;
+//   display: flex;
+//   justify-content: center;
+// }
+// .rent{
+
+//   background-color: white;
+// }
+.container_imgs {
+  display: flex;
+  align-items: center;
+ padding-left: 10px;
+}
+.image{
+  img {
+    object-fit: contain;
+  }
+}
+.card-body{
+  font-size: 24px;
+  font-kerning: auto;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
 }
-
-.title{
-  text-align: center;
-
-}
-
-.price{
-  font-weight: bolder;
-  text-align:justify;
-}
-.contenu{
-
-  background-color: white;
-}
-h2{
-  font-weight: bolder;
-  display: flex;
-  justify-content: center;
-}
-.rent{
-
-  background-color: white;
+.card_description{
+  font-size: 18px;
 }

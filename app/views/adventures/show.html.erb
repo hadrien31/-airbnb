@@ -1,21 +1,28 @@
 <div class="show">
 
-<div class="cardshow" style="width: 16rem;">
-<%if @adventure.photos.attached?%>
-  <%= cl_image_tag(@adventure.photos.first.key, :transformation=>[
-        {:height=>300, :width=>250, :crop=>"scale"},
-        ]) %>
-  <% end %>
-        <div class="contenu">
-  <div class="card-body">
-  <h2><%= @adventure.title %></h2>
-  </div>
- <div class = "description">
- <p><%= @adventure.decription %></p>
+  <div class="card"  style="width: 50rem; ">
+        <div class="container_imgs">
+          <div class="image">
+        <img src = "<%=@adventure.photos.first.url%>"class = "card-img-top" height=300 width=250 alt="...">
+          </div>
+          <div class="image">
+        <img src = "<%=@adventure.photos.second.url%>" class = "card-img-top" height=300 width=250 alt="...">
+        </div>
+        <div class="image">
+        <img src = "<%=@adventure.photos.third.url%>" class = "card-img-top" height=300 width=250 alt="...">
+          </div>
+        </div>
 
- </div>
- <div class = "location">  <p>Location: <%= @adventure.location %></p> </div>
- <div class = "price"> <p>Price: <%= @adventure.price %> $</p> </div>
- <div class="rent">reservation</div>
- </div>
-</div>
+  </div>
+
+    <ul class="list-group list-group-flush">
+    <div class= "card-body">
+      <li class = "list-group-item"> <%= @adventure.title %>  </li>
+      </div>
+      <div class= "card_description">
+        <li class = "list-group-item"> <%= @adventure.decription %>  </li>
+        </div>
+        <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
+        <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
+      </ul>
+  </div>
