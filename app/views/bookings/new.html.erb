@@ -2,11 +2,11 @@
 <div class="container">
   <div class="bg-black rounded p-3 shadow text-white">
     <div class="form-wrapper">
-      <h2>Book a adventure</h2>
+      <h2>Book this adventure</h2>
       <%= simple_form_for [@adventure, @booking],data: { controller: 'flatpickr' } do |f| %>
         <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
         <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
-        <%= f.submit 'Schedule your appointment' %>
+        <%= f.submit 'Book this adventure' %>
       <% end %>
     </div>
   </div>
