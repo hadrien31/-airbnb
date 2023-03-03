@@ -17,28 +17,26 @@
         <div class = "title-body">
             <li class = "list-group"> <%= @adventure.title %> <i class="bi bi-person-circle"> </li>
         </div>
-        <div class = "card_description">
+        <div class = "card_description p-3">
           <li class = "list-group-item"> <%= @adventure.decription %>  </li>
           <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
+          <li class = "list-group-item"> duration: <%= @adventure.duration %> </li>
           <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
         </div>
       </ul>
 
-      <ul class="list-group list-group-flush">
 
-        <div class= "title-body">
-          <li class = "list-group"> <%= @adventure.title %>  </li>
-        </div>
+   
 
-        <div class= "card_description">
-          <li class = "list-group-item"> <%= @adventure.decription %>  </li>
-        </div>
+    <section class="portfolio-experiment">
+  <a>
+    <span class="text"><%= link_to "Book this adventure", new_adventure_booking_path(@adventure), class: "shiny-btn" %></span>
+    <span class="line -right"></span>
+    <span class="line -top"></span>
+    <span class="line -left"></span>
+    <span class="line -bottom"></span>
+  </a>
+</section>
 
-        <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
-        <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
-      </ul>
-    <div>
-      <%= link_to "Book this adventure", new_adventure_booking_path(@adventure), class: "btn btn-primary" %>
-    </div>
   </div>
 </div>
