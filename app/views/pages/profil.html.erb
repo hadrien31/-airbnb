@@ -46,6 +46,7 @@
       <% end %>
     </div>
 
+
     <div class="dashboard-cards col-6">
       <% current_user.adventures.each do |adventure| %>
 
@@ -53,6 +54,15 @@
     <%= link_to adventure_path(adventure), :action => 'go' do %>
 
       <%if adventure.photos.attached?%>
+
+  <div class="dashboard-cards">
+  <% current_user.adventures.each do |adventure| %>
+
+  <div class="dashboard-card">
+    <%= link_to adventure_path(adventure), :action => 'go' do %>
+    <i class="fa-regular fa-trash-can"></i>
+      <%if adventure.photos%>
+
         <%= cl_image_tag(adventure.photos.first.key, :transformation=>[
         {:height=>300, :width=>250, :crop=>"scale"},
         ]) %>
