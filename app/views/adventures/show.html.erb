@@ -1,12 +1,18 @@
 <div class="row col-12">
   <div class="img-fluid"  style="width: 50rem; ">
     <div class ="container_imgs">
-      <img src = "<%=@adventure.photos.third.url%>" class = "card-img-top" height=300 width=250 alt="...">
+      <%= cl_image_tag(@adventure.photos.first.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
     <div class ="image_right">
-        <img src = "<%=@adventure.photos.first.url%>"class = "card-img-top" height=300 width=250 alt="...">
+        <%= cl_image_tag(@adventure.photos.second.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
     </div>
     <div class ="image_left">
-        <img src = "<%=@adventure.photos.second.url%>" class = "card-img-top" height=300 width=250 alt="...">
+        <%= cl_image_tag(@adventure.photos.third.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
     </div>
   </div>
 

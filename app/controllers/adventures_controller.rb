@@ -9,7 +9,7 @@ class AdventuresController < ApplicationController
   def show
     @adventure = Adventure.find(params[:id])
     @booking = Booking.new
-    
+
   end
 
   def create
@@ -30,7 +30,7 @@ class AdventuresController < ApplicationController
   private
 
   def adventure_params
-    params.require(:adventure).permit(:title, :price, :location, :decription, :photos)
+    params.require(:adventure).permit(:title, :price, :location, :decription, photos: [])
   end
 
   def set_adventure
