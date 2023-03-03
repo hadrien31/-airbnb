@@ -1,4 +1,5 @@
 
+
    <div class="row col-12">
   <div class="img-fluid"  style="width: 50rem; ">
     <div class ="container_imgs">
@@ -46,4 +47,55 @@
     </span>
   </a>
 </div>
+
+<div class="row col-12">
+  <div class="img-fluid"  style="width: 50rem; ">
+    <div class ="container_imgs">
+      <%= cl_image_tag(@adventure.photos.first.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
+    <div class ="image_right">
+        <%= cl_image_tag(@adventure.photos.second.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
+    </div>
+    <div class ="image_left">
+        <%= cl_image_tag(@adventure.photos.third.key, :transformation=>[
+        {:height=>300, :width=>250, :crop=>"scale"},
+        ]) %>
+    </div>
+  </div>
+
+</div>
+<div class = "row col-8">
+  <ul class ="list-group list-group-flush">
+    <div class = "title-body">
+        <li class = "list-group"> <%= @adventure.title %> <i class="bi bi-person-circle"> </li>
+    </div>
+    <div class = "card_description">
+      <li class = "list-group-item"> <%= @adventure.decription %>  </li>
+      <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
+      <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
+    </ul>
+
+
+    <ul class="list-group list-group-flush">
+    <div class= "title-body">
+      <li class = "list-group"> <%= @adventure.title %>  </li>
+      </div>
+      <div class= "card_description">
+        <li class = "list-group-item"> <%= @adventure.decription %>  </li>
+        </div>
+        <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
+        <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
+      </ul>
+<div>
+      <%= link_to "Book this adventure", new_adventure_booking_path(@adventure), class: "btn btn-primary" %>
+</div>
+
+  </div>
+</div>
+<div class = "row col-4 >
+
+
 </div>

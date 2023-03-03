@@ -5,7 +5,7 @@
         <h3>Create a new adventure</h3>
         <%= simple_form_for @adventure do |f| %>
           <%= f.input :title, placeholder: 'title' %>
-          <%= f.input :photos, as: :file %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.input :price, placeholder: 'price' %>
           <%= f.input :location, placeholder: 'location' %>
           <%= f.input :decription, placeholder: 'description' %>
