@@ -40,7 +40,7 @@
             <li class="ms-2"> <%= adventure.location %></li>
             <li class="ms-2"> <%= adventure.duration %></li>
             <li class="ms-2"> Price: <%= adventure.price %> $</li>
-            <li class="ms-2"><%= link_to "", profil_path, class: "fa-regular fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this adventure?" } %></li>
+            <li class="ms-2"><%= link_to "", adventure_path(adventure), class: "fa-regular fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this adventure?" } %></li>
           <% end %>
         </div>
       <% end %>

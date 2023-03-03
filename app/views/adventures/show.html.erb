@@ -22,15 +22,15 @@
           <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
           <li class = "list-group-item"> duration: <%= @adventure.duration %> </li>
           <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
+
         </div>
       </ul>
 
 
-   
 
     <section class="portfolio-experiment">
   <a>
-    <span class="text"><%= link_to "Book this adventure", new_adventure_booking_path(@adventure), class: "shiny-btn" %></span>
+    <span class="text"><%= link_to "Book this adventure", new_adventure_booking_path(@adventure)%></span>
     <span class="line -right"></span>
     <span class="line -top"></span>
     <span class="line -left"></span>
