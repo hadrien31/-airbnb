@@ -9,6 +9,7 @@
         <img src = "<%=@adventure.photos.second.url%>" class = "card-img-top" height=300 width=250 alt="...">
     </div>
   </div>
+<<<<<<< HEAD
 </div>
 <div class = "row col-8">
   <ul class ="list-group list-group-flush">
@@ -20,6 +21,22 @@
       <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
       <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
     </ul>
+=======
+
+    <ul class="list-group list-group-flush">
+    <div class= "title-body">
+      <li class = "list-group"> <%= @adventure.title %>  </li>
+      </div>
+      <div class= "card_description">
+        <li class = "list-group-item"> <%= @adventure.decription %>  </li>
+        </div>
+        <li class = "list-group-item"> Location: <%= @adventure.location %> </li>
+        <li class = "list-group-item"> Price: <%= @adventure.price %> $ </li>
+      </ul>
+<div>
+      <%= link_to "Book this adventure", new_adventure_booking_path(@adventure), class: "btn btn-primary" %>
+</div>
+>>>>>>> 4bb7870109c6adedfc3e0ad2805ffbe774ce272e
   </div>
 </div>
 <div class = "row col-4 >

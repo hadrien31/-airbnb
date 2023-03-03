@@ -10,7 +10,7 @@
   <div class="cards">
   <% @adventures.each do |adventure| %>
 
-  <div class="card">
+  <div class="card m-3">
     <%= link_to adventure_path(adventure), :action => 'go' do %>
 
       <%if adventure.photos.attached?%>
@@ -19,15 +19,14 @@
         ]) %>
       <% end %>
       <li class="ms-2"> <%= adventure.title %></li>
-      <li class="ms-2"> Price: <%= adventure.price %> $</li>
       <li class="ms-2"> <%= adventure.location %></li>
+      <li class="ms-2"> <%= adventure.duration %></li>
+      <li class="ms-2"> Price: <%= adventure.price %> $</li>
+
     <% end %>
 </div>
   <% end %>
 </div>
-
-
-<div class="other pt-3"><%= link_to "Create a new adventure", new_adventure_path, class: "btn btn-primary" %></div>
 
 
 </div>
