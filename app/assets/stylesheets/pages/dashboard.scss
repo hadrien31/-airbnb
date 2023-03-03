@@ -1,0 +1,33 @@
+.dashboard-cards{
+  font-size: medium;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  list-style-type : none;
+}
+
+.dashboard-cards img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.dashboard-card{
+  background-color: rgb(38, 38, 38);
+  overflow: hidden;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  transition: all .2s ease-in-out;
+}
+
+.dashboard-cards a {
+  color: white;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.1);
+}
+
+.title-cards {
+  color: white;
+}

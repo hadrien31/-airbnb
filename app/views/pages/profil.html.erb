@@ -2,65 +2,69 @@
   <div class="text-white">
 
     <%= image_tag "https://res.cloudinary.com/dtlwkdqpv/image/upload/v1677676328/denis-brogniart_ehh2nh.jpg", class: "avatar-denis", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <%= current_user.email %>
+    <%= current_user.username %>
 
     <%#= current_user.adventures.each do |adventure| %>
       <%#= aventure.location %>
     <%# end %>
   </div>
 </div>
+<div class="container">
+  <div class="other pt-3">
+    <%= link_to "Create a new adventure", new_adventure_path, class: "btn btn-dark" %>
+  </div>
+
+  <div class="row justify-content-envenly mt-4">
+    <div class="title-cards col-6">
+      <h3>Booking</h3>
+    </div>
+    <div class="title-cards col-6">
+      <h3>My reservation</h3>
+    </div>
+  </div>
+</div>
 
 <div class="container">
- <div class="other pt-3"><%= link_to "Create a new adventure", new_adventure_path, class: "btn btn-dark" %></div>
+  <div class="row justify-content-envenly mt-2">
+    <div class="dashboard-cards col-6">
+      <% current_user.adventures.each do |adventure| %>
 
-  <div class="dashboard-cards">
-  <% current_user.adventures.each do |adventure| %>
+        <div class="dashboard-card">
+          <%= link_to adventure_path(adventure), :action => 'go' do %>
 
-  <div class="dashboard-card">
+            <%if adventure.photos.attached?%>
+              <%= cl_image_tag(adventure.photos.first.key, :transformation=>[
+              {:height=>300, :width=>250, :crop=>"scale"},
+              ]) %>
+            <% end %>
+            <li class="ms-2"> <%= adventure.title %></li>
+            <li class="ms-2"> <%= adventure.location %></li>
+            <li class="ms-2"> <%= adventure.duration %></li>
+            <li class="ms-2"> Price:  <%= adventure.price %> $</li>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="dashboard-cards col-6">
+      <% current_user.adventures.each do |adventure| %>
+
+        <div class="dashboard-card">
     <%= link_to adventure_path(adventure), :action => 'go' do %>
-    <i class="fa-regular fa-trash-can"></i>
-      <%if adventure.photos%>
+
+      <%if adventure.photos.attached?%>
         <%= cl_image_tag(adventure.photos.first.key, :transformation=>[
         {:height=>300, :width=>250, :crop=>"scale"},
         ]) %>
       <% end %>
       <li class="ms-2"> <%= adventure.title %></li>
-      <li class="ms-2"> Price: <%= adventure.price %> $</li>
       <li class="ms-2"> <%= adventure.location %></li>
+      <li class="ms-2"> <%= adventure.duration %></li>
+      <li class="ms-2"> Price:  <%= adventure.price %> $</li>
+
     <% end %>
 </div>
-  <% end %>
-</div>
-
-
-		<%# <div class="col-md-4">
-    <h4 class="text-center"><strong>STYLE 3</strong></h4>
-    <hr>
-    <div class="profile-card-4 text-center"><img src="https://res.cloudinary.com/dtlwkdqpv/image/upload/v1677676328/denis-brogniart_ehh2nh.jpg" class="img img-responsive">
-        <div class="profile-content">
-            <div class="profile-name">John Doe
-                <p>@johndoedesigner</p>
-            </div>
-            <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="profile-overview">
-                        <p>TWEETS</p>
-                        <h4>1300</h4></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="profile-overview">
-                        <p>FOLLOWERS</p>
-                        <h4>250</h4></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="profile-overview">
-                        <p>FOLLOWING</p>
-                        <h4>168</h4></div>
-                </div>
-            </div>
-        </div>
+      <% end %>
     </div>
+  </div>
 </div>
-	</div>
-</div> %>
